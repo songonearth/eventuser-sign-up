@@ -1,9 +1,11 @@
 import React from 'react';
+import NavBar from "./components/NavBar";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-var Input = React.createClass({
-	render: function() {
+class Input extends React.Component {
+    render() {
 		return (
 			<div className="Input">
 				<input 
@@ -17,46 +19,46 @@ var Input = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-var Modal = React.createClass({
-	render: function() {
+class Modal extends React.Component {
+    render() {
 		return (
-			<div className="Modal">
-				<form 
-					onSubmit={this.props.onSubmit}
-					className="ModalForm">
-					
-					<Input
-						id="username"
-						type="email"
-						placeholder="Email Address" />
-					
-				</form>
-				<button>
-						Log in <i className="fa fa-fw fa-chevron-right"></i>
-					</button>
+			<div>
+				<h1>Let's Get Started</h1>
+				<div className="Modal">
+					<form 
+						onSubmit={this.props.onSubmit}
+						className="ModalForm">
+						
+						<Input
+							id="username"	
+							type="email"
+							placeholder="Email Address" />
+						
+					</form>
+					<button>
+							Start <i className="fa fa-fw fa-chevron-right"></i>
+						</button>
+				</div>
 			</div>
 		);
 	}
-});
+}
 
-var App = React.createClass({
-	
-	getInitialState: function() {
-		return { mounted: false };
-	},
-	
-	componentDidMount: function() {
+class App extends React.Component {
+    state = { mounted: false };
+
+    componentDidMount() {
 		this.setState({ mounted: true });
-	},
-	
-	handleSubmit: function(e) {
+	}
+
+    handleSubmit = (e) => {
 		this.setState({ mounted: false });
 		e.preventDefault();
-	},
+	};
 
-	render: function() {
+    render() {
 		var child;
 
 		if(this.state.mounted) {
@@ -65,6 +67,7 @@ var App = React.createClass({
 		
 		return(
 			<div className="App">
+				<NavBar />
 				<ReactCSSTransitionGroup 
 					transitionName="example"
 					transitionEnterTimeout={500}
@@ -74,6 +77,6 @@ var App = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
 export default App;

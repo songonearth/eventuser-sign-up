@@ -2,43 +2,53 @@
 body {
   background-image: url(https://unsplash.it/1400/795);
   background-position: center;
+  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #3E363F;
+  color: #ffffff;
   font-family: "Lato", sans-serif;
   height: 100vh;
   overflow: hidden;
 }
 
+.navbar {
+  background: black;
+  width: cover;
+ }
+
 .App {
-  align-items: center;
+  /* align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
   width: 100vw;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
 .Modal {
-  background: #3E363F;
+  background: #ffffff;
   border-radius: 2px;
   padding: 20px;
-  width: 200px;
-}
+  width: 250px;
+  margin: 0 auto;
+} 
+
+
 
 .Input {
   display: flex;
   flex-direction: row-reverse;
-  border-bottom: 1px solid rgba(255, 252, 232, 0.1);
+  border-bottom: 1px solid #aba4a4;
+  color:  #1c1c1c;
   padding-bottom: 3px;
   margin-bottom: 5px;
 }
 .Input input {
   outline: none;
   border: 0;
-  color: #FFFCE8;
+  color: #1c1c1c;
   background: transparent;
   font-family: "Lato", sans-serif;
   flex: 1 0 auto;
@@ -48,15 +58,10 @@ body {
 .Input input:focus ~ label {
   opacity: 1;
 }
-.Input input[type='text'] ~ label::before {
-  content: "\f007";
-}
 .Input input[type='email'] ~ label::before {
   content: "\f1fa";
 }
-.Input input[type='password'] ~ label::before {
-  content: "\f023";
-}
+
 .Input label {
   font-family: FontAwesome;
   font-size: 13px;
@@ -65,7 +70,7 @@ body {
 }
 .Input label::before {
   align-items: center;
-  color: #FFFCE8;
+  color: #1c1c1c;
   display: flex;
   height: 30px;
   justify-content: center;
@@ -90,8 +95,8 @@ button {
   width: 100%;
 }
 button .fa {
+  align-items: center;
   font-size: 12px;
-  margin-left: auto;
   position: relative;
   top: 1px;
 }
