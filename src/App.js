@@ -37,7 +37,7 @@ class Modal extends React.Component {
 							placeholder="Email Address" />
 						
 					</form>
-					<button>
+					<button className="btn-start"> 
 							Start <i className="fa fa-fw fa-chevron-right"></i>
 						</button>
 				</div>

@@ -16,15 +16,20 @@ body {
   width: cover;
  }
 
+ .bg-light {
+   background: white!important;
+ }
+
+
 .App {
-  /* align-items: center;
-  display: flex;
+  /* align-items: center; */
+  /* display: flex; */
   height: 100vh;
   justify-content: center;
   width: 100vw;
   position: absolute;
   top: 0;
-  left: 0; */
+  left: 0;
 }
 
 .Modal {
@@ -77,7 +82,7 @@ body {
   width: 30px;
 }
 
-button {
+.btn-start {
   align-items: center;
   background: #DD403A;
   border: 0;
